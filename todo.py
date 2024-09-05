@@ -1,3 +1,4 @@
+import uuid
 
 def  add_task(task, todo_list):
   todo_list.append(task)
@@ -7,8 +8,6 @@ def search(name):
   for item in todo_list:
     if item[1] == name:
       return item[0]
-    
-
 
 def display(list,id = 0):
   if id == 0:
@@ -19,7 +18,6 @@ def display(list,id = 0):
       if item[0] == id:
         print(f"ID: {item[0]} Title: {item[1]} Description: {item[2]}")
 display(todo_list,2)
-import uuid
 
 def generate_unique_id():
     return uuid.uuid4()
