@@ -1,3 +1,4 @@
+
 def  add_task(task, todo_list):
   todo_list.append(task)
 
@@ -18,3 +19,15 @@ def display(list,id = 0):
       if item[0] == id:
         print(f"ID: {item[0]} Title: {item[1]} Description: {item[2]}")
 display(todo_list,2)
+import uuid
+
+def generate_unique_id():
+    return uuid.uuid4()
+
+def add_task(task: tuple, todo_list: list):
+    todo_list.append(task)
+
+def create_task(task_name: str, task_details: str) -> tuple:
+    return (generate_unique_id(), task_name, task_details)
+
+
